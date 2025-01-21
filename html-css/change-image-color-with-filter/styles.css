@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+}
+
+/* Common */
+main {
+    margin-top: 50px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    margin: 30px auto;
+    max-width: 450px;
+    filter: hue-rotate(45deg); /* default for color1 */
+}
+
+input {
+    display: none;
+}
+
+/* Color rotate */
+#color1:checked ~ img {
+    filter: hue-rotate(45deg);
+}
+
+#color2:checked ~ img {
+    filter: hue-rotate(-54deg);
+}
+
+#color3:checked ~ img {
+    filter: hue-rotate(280deg);
+}
+
+#color4:checked ~ img {
+    filter: hue-rotate(-10deg);
+}
+
+/* Label */
+label {
+    display: inline-block;
+    padding: 1rem;
+    border: solid whitesmoke 2px;
+    cursor: pointer;
+}
+
+label::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+[for="color1"]::before {
+    background: rgb(160, 50, 215);
+}
+
+[for="color2"]::before {
+    background: rgb(0, 150, 150);
+}
+
+[for="color3"]::before {
+    background: rgb(0, 150, 50);
+}
+
+[for="color4"]::before {
+    background: rgb(50, 100, 200);
+}
+
+#color1:checked ~ [for="color1"],
+#color2:checked ~ [for="color2"],
+#color3:checked ~ [for="color3"],
+#color4:checked ~ [for="color4"] {
+    border-color: lightgray;
+}
