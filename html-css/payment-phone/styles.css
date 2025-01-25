@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color */
+    --primary-color: #7264d6;
+    --secondary-color: #212832;
+    --primary-desc-color: #696d76;
+    --primary-title-color: #696d77;
+
+    --primary-font-family: "Open Sans", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-family: var(--primary-font-family);
+}
+
+h1 {
+    margin-bottom: 16px;
+    color: var(--primary-color);
+}
+
+.hero__media__phone {
+    position: relative;
+    width: 296px;
+    height: 562px;
+    border-radius: 40px;
+    border: 12px solid var(--secondary-color);
+    background: #fff;
+    overflow: hidden;
+}
+
+.hero__media__phone::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    translate: -50% 0;
+    width: 144px;
+    height: 36px;
+    border-radius: 0px 0px 18px 18px;
+    background: #3c2f60;
+}
+
+.hero__phone__screen {
+    padding: 40px 11px 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__phone__card {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    padding: 16px;
+    color: #fff;
+    border-radius: 20px;
+    background: linear-gradient(76deg, #9487ea 11.52%, #6657d2 70.78%);
+}
+
+.hero__phone__card::after {
+    content: url(../img/hero-decor-3.svg);
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
+.hero__phone__card__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__phone__card__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.hero__phone__card__money {
+    margin-top: 2px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.hero__phone__card__info {
+    position: relative;
+    z-index: 1;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px 12px;
+}
+
+.phone__card__desc {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.phone__card__detail {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hero__phone__filter {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__phone__filter__span {
+    color: #31456a;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.hero__phone__item {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__item__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #edf8fc;
+}
+
+.hero__phone__item:nth-child(2) .hero__item__wrap {
+    background: #fbf0f0;
+}
+
+.hero__phone__item:nth-child(3) .hero__item__wrap {
+    background: #edf6f4;
+}
+
+.hero__phone__item:nth-child(4) .hero__item__wrap {
+    background: #f1f0fb;
+}
+
+.hero__item__content {
+    margin-left: 14px;
+}
+
+.hero__item__title {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero__item__mail,
+.hero__item__date {
+    margin-top: 6px;
+    color: var(--primary-desc-color);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.hero__item__price {
+    text-align: right;
+    margin-left: auto;
+}
